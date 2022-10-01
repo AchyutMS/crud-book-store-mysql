@@ -1,0 +1,172 @@
+.title {
+  text-align: center;
+  color: orangered;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+}
+
+.product-card {
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.product-image img {
+  max-width: 100%;
+}
+
+.product-info {
+  margin-top: auto;
+}
+
+.product-info h5 {
+  margin: 0%;
+  font-size: 2rem;
+  text-align: center;
+  color: green;
+}
+
+.product-info h6 {
+  margin: 0%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.update-btn {
+  color: white;
+  background-color: blueviolet;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: white;
+  background-color: red;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.products .product-card:first-child,
+.products .product-card:nth-child(2) {
+  flex: 2 46%;
+}
+
+@media (max-width: 920px) {
+  .product-card {
+    flex: 1 21%;
+  }
+}
+
+.footer {
+  background-color: green;
+  border-top: 2px solid red;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Adding a book */
+
+input[type="text"] {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 1.25em;
+}
+
+input[type="textarea"] {
+  width: 75%;
+  border: 1px solid #ccc;
+  height: 75px;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 1em;
+}
+input[type="number"] {
+  width: 25%;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 1em;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
